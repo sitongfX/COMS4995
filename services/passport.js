@@ -20,7 +20,7 @@ passport.use(
     new GoogleStrategy({
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/postmessage',
+      callbackURL: '/auth/postmessage/callback',
       proxy: true
     }, 
     async (accessToken, refreshToken, profile, done) => {
