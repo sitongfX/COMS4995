@@ -6,7 +6,7 @@ module.exports = (app) => {
       })
       );
       
-      app.get('postmessage', 
+      app.get('/auth/postmessage/dashboard', 
       passport.authenticate('google'),
       (req,res) => {res.redirect('/surveys');
 
