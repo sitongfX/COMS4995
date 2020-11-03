@@ -10,10 +10,8 @@ class SurveyList extends Component {
 
     renderSurveys(){
         return this.props && this.props.surveys && (this.props.surveys.surveys || []).map( survey => { return (
-            <div class="container">
-
             <div className="row">
-            {/* <div className="col s6 m4 l2"> */}
+            <div className="col s6 m4 l2">
                 <div className="card darken-1" key={survey._id}>
 
                     <div className="card-content">
