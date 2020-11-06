@@ -8,27 +8,28 @@ class SurveyList extends Component {
 
     }
 
-    renderSurveys(){
-        return this.props && this.props.surveys && (this.props.surveys.surveys || []).map( survey => { return (
-            <div className="row">
-            <div className="col s6 m4 l2">
-                <div className="card darken-1" key={survey._id}>
+    renderSurveys() {
+        return this.props && this.props.surveys && (this.props.surveys.surveys || []).map(survey => {
+            return (
+                <div className="row">
+                    <div className="col s6 m4 l2">
+                        <div className="card darken-1" key={survey._id}>
 
-                    <div className="card-content">
-                    <span className="card-title">{survey.title}</span>
-                    <p>
-                        {survey.body}
-                    </p>
-                    <p className="right">Sent On: {new Date(survey.dateSent).toLocaleDateString()}
-                    </p>
-                    </div>  
-                    <div className="card-action">
-                        <a>Yes: {survey.yes}</a>
-                        <a>No: {survey.no}</a>
+                            <div className="card-content">
+                                <span className="card-title">{survey.title}</span>
+                                <p>
+                                    {survey.body}
+                                </p>
+                                <p className="right">Sent On: {new Date(survey.dateSent).toLocaleDateString()}
+                                </p>
+                            </div>
+                            <div className="card-action">
+                                <a>Yes: {survey.yes}</a>
+                                <a>No: {survey.no}</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-  </div>
 
             );
         });
