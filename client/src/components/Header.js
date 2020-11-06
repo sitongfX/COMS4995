@@ -24,8 +24,6 @@ class Header extends Component {
     }
   }
     render() {
-      background();
-
       // console.log(this.props);
         return (
             <nav className="nav">
